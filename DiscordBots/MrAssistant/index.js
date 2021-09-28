@@ -1,19 +1,28 @@
+// /$$      /$$            /$$$$$$                     /$$             /$$                           /$$    
+// | $$$    /$$$           /$$__  $$                   |__/            | $$                          | $$    
+// | $$$$  /$$$$  /$$$$$$ | $$  \ $$  /$$$$$$$ /$$$$$$$ /$$  /$$$$$$$ /$$$$$$    /$$$$$$  /$$$$$$$  /$$$$$$  
+// | $$ $$/$$ $$ /$$__  $$| $$$$$$$$ /$$_____//$$_____/| $$ /$$_____/|_  $$_/   |____  $$| $$__  $$|_  $$_/  
+// | $$  $$$| $$| $$  \__/| $$__  $$|  $$$$$$|  $$$$$$ | $$|  $$$$$$   | $$      /$$$$$$$| $$  \ $$  | $$    
+// | $$\  $ | $$| $$      | $$  | $$ \____  $$\____  $$| $$ \____  $$  | $$ /$$ /$$__  $$| $$  | $$  | $$ /$$
+// | $$ \/  | $$| $$      | $$  | $$ /$$$$$$$//$$$$$$$/| $$ /$$$$$$$/  |  $$$$/|  $$$$$$$| $$  | $$  |  $$$$/
+// |__/     |__/|__/      |__/  |__/|_______/|_______/ |__/|_______/    \___/   \_______/|__/  |__/   \___/  
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant
 // VERSION : 1.2.2
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
-app.get('/', function(request, response) {
-	response.sendFile(__dirname + '/views/index.html');
-});
-app.listen(3000, () => console.log(`FUNCIONAMIENTO CORRECTO`));
+// ----------------------- [Replit] ---------------------------
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const app = express();
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(express.static('public'));
+// app.get('/', function(request, response) {
+// 	response.sendFile(__dirname + '/views/index.html');
+// });
+// app.listen(3000, () => console.log(`FUNCIONAMIENTO CORRECTO`));
 
 //Codigo del bot
 
@@ -405,29 +414,29 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Estos son los precios de las criptomonedas, esta informacion es actualizada con frecuencia por mi programador **MrTechX** Personalmente",
             fields: [{
                 name: "Bitcoin",
-                value: "42538.10 USD - 852331.66 MXN",
+                value: "41704.70 USD - 848522.99 MXN",
             },
             {
                 name: "Ethereum",
-                value: "2951.43 USD - 59137.51 MXN",
+                value: "2848.04 USD - 57946.16 MXN",
             },
             {
                 name: "Monero",
-                value: "271.89 USD - 5447.83 MXN",
+                value: "231.5 USD - 4710.09 MXN",
             },
             {
                 name: "Litecoin",
-                value: "157.46 USD - 3155.01 MXN",
+                value: "143.89 USD - 2927.58 MXN",
             },
             {
                 name: "Dogecoin",
-                value: "0.30 USD - 6.01 MXN",
+                value: "0.21 USD - 4.27 MXN",
         }
         ],
         timestamp: new Date(),
         footer: {
             icon_url: client.user.avatarURL(),
-            text: "Mr.Assistant | Actualizacion 22/Sep/2021"
+            text: "Mr.Assistant | Actualizacion 28/Sep/2021"
             }
         }
         });
