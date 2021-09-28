@@ -10,3 +10,11 @@ DISCORD BOTS
 - JavaScript
 - JSON
 ```
+```console
+TELEGRAM BOTS
+- Telegraf.js
+- Telegram API
+- Node.js
+- JavaScript
+- JSON
+```
