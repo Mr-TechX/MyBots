@@ -21,4 +21,3 @@ TELEGRAM BOTS
 - JavaScript
 - JSON
 ```
-<img src="https://raw.githubusercontent.com/Mr-TechX/MyBots/main/Caps/2.jpg"><img src="https://raw.githubusercontent.com/Mr-TechX/MyBots/main/Caps/3.jpg">
