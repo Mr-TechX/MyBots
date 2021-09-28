@@ -184,29 +184,29 @@ if(message.content.startsWith(prefix + "cryptos")){
         description: "Estos son los precios de las criptomonedas mas conocidas, esta informacion es actualizada con frecuencia por **Mr. TechX** personalmente",
         fields: [{
             name: "Bitcoin",
-                value: "42538.10 USD - 852331.66 MXN",
+                value: "41704.70 USD - 848522.99 MXN",
             },
             {
                 name: "Ethereum",
-                value: "2951.43 USD - 59137.51 MXN",
+                value: "2848.04 USD - 57946.16 MXN",
             },
             {
                 name: "Monero",
-                value: "271.89 USD - 5447.83 MXN",
+                value: "231.5 USD - 4710.09 MXN",
             },
             {
                 name: "Litecoin",
-                value: "157.46 USD - 3155.01 MXN",
+                value: "143.89 USD - 2927.58 MXN",
             },
             {
                 name: "Dogecoin",
-                value: "0.30 USD - 6.01 MXN",
+                value: "0.21 USD - 4.27 MXN",
         }
         ],
         timestamp: new Date(),
         footer: {
             icon_url: client.user.avatarURL(),
-            text: "HackerBot | Actualizacion 22/Sep/2021"
+            text: "HackerBot | Actualizacion 28/Sep/2021"
         }
     }
     });
