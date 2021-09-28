@@ -36,15 +36,15 @@ var prefix = "w_";
 var version = "v1.0.5"
 
 //----------------[Variables Crypto]----------------
-let btcvar = "42538.10 USD - 852331.66 MXN";
-let ethvar = "2951.43 USD - 59137.51 MXN";
-let xmrvar = "271.89 USD - 5447.83 MXN";
-let ltcnvar = "157.46 USD - 3155.01 MXN";
-let dogevar = "0.30 USD - 6.01 MXN";
-let fecha = "(actualización 22/Sep/2021)";
+let btcvar = "41704.70 USD - 848522.99 MXN";
+let ethvar = "2848.04 USD - 57946.16 MXN";
+let xmrvar = "231.5 USD - 4710.09 MXN";
+let ltcnvar = "143.89 USD - 2927.58 MXN";
+let dogevar = "0.21 USD - 4.27 MXN";
+let fecha = "(actualización 28/Sep/2021)";
 
 //--------------[Mensaje de Consola]--------------
-console.log("Wall-E Activado")
+console.log("Wall-E Activado");
 
 //----------------[Listas]----------------
 
@@ -74,7 +74,7 @@ bot.command('w_pruebas', (ctx) => {
 
 bot.command('w_crypto', (ctx) => {
     ctx.reply("MIS COMANDOS DE CRIPTOMONEDAS SON: \n\n/w_precio_bitcoin - Precio de Bitcoin \n\n/w_precio_ethereum - Precio de Ethereum \n\n/w_precio_litecoin - Precio de Litecoin \n\n/w_precio_monero - Precio de Monero \n\n/w_precio_dogecoin - Precio de Dogecoin \n\n/w_cryptos - Precio de las cryptomonedas guardadas en mi lista")
-})
+});
 
 bot.command('w_util', (ctx) => {
     ctx.reply("MIS COMANDOS EXTRAS / UTILES SON: \n\n/w_chat_muerto - para enviar una imagen de chat muerto xd")
@@ -124,11 +124,11 @@ bot.command('w_pregunta', (ctx) => {
     let respuesta = ["Si", "No", "Tal vez", "Obvio", "Yo digo que si", "Yo digo que no", "Probablemente"]
     var random = respuesta[Math.floor(Math.random() * respuesta.length)]
     ctx.reply(`Mi respuesta es ${random} \n\n(Si no preguntaste nada, /w_pregunta_h)`)
-})
+});
 
 bot.command('w_pregunta_h', (ctx) => {
     ctx.reply("Agrega una pregunta que se pueda responder con *Si, No, Tal Vez*, si no es así usa \n/w_pregunta [Tu pregunta] \nEjemplo: \n/w_pregunta aprobaré el examen?")
-})
+});
 
 bot.command('w_volado_h', (ctx) => {
     let imgmain = "https://raw.githubusercontent.com/Mr-TechX/Wall-E_Telegram/v1.0.0/img/menu.jpg"
@@ -147,7 +147,7 @@ bot.command('w_pescar', (ctx) => {
     let respuesta = ['Felicitaciones, ' + ctx.from.first_name + ' pescaste un: 🐟', 'Felicitaciones, ' + ctx.from.first_name + ' pescaste un: 🐠', 'Felicitaciones, ' + ctx.from.first_name + ' pescaste un: 🐡', 'Felicitaciones, ' + ctx.from.first_name + ' pescaste un: 🦀', 'Felicitaciones, ' + ctx.from.first_name + ' pescaste un: 🦐', 'Felicitaciones, ' + ctx.from.first_name + ' pescaste un: 🦑', 'Felicitaciones, ' + ctx.from.first_name + ' pescaste un: 🐙']
     var random = respuesta[Math.floor(Math.random() * respuesta.length)]
     ctx.reply(`${random}`)
-})
+});
 
 //-----------------[Dross]-----------------
 bot.command('dross_cmds', (ctx) => {
@@ -195,7 +195,7 @@ bot.command('w_precio_dogecoin', (ctx) => {
 });
 
 bot.command('w_cryptos', (ctx) => {
-    ctx.reply("ACTUALIZACIÓN 22/Sep/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
+    ctx.reply("ACTUALIZACIÓN 28 /Sep/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
 });
 
 //-----------------[Util / Extra]-----------------
