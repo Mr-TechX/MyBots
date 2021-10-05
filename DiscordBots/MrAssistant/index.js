@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant
-// VERSION : 1.2.2
+// VERSION : 1.2.3
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // ----------------------- [Replit] ---------------------------
@@ -262,7 +262,7 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Mis version de codigo de bot",
             fields: [{
             name: "Version",
-            value: "Actualmente estoy en mi version 1.2.2 que fue lanzada el 22/Sep/2021 por TecnoProjects | MrTechX",
+            value: "Actualmente estoy en mi version 1.2.3 que fue lanzada el 5/Oct/2021 por TecnoProjects | MrTechX",
         },
         {
             name: "Codigo Fuente",
@@ -289,7 +289,7 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Estos son los precios de las criptomonedas, esta informacion es actualizada con frecuencia por mi programador",
             fields: [{
             name: "Version",
-            value: "Actualmente estoy en mi version 1.0.6 que fue lanzada el 22/Sep/2021 por TecnoProjects | MrTechX",
+            value: "Actualmente estoy en mi version 1.0.7 que fue lanzada el 5/Oct/2021 por TecnoProjects | MrTechX",
         },
         {
             name: "Codigo Fuente",
@@ -382,7 +382,7 @@ if(message.content.startsWith(prefix + "cmds")){
             },
             {
                 name: "Version de MrAssistant",
-                value: "1.2.2"
+                value: "1.2.3"
             },
             {
                 name: "Programado con:",
@@ -414,29 +414,29 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Estos son los precios de las criptomonedas, esta informacion es actualizada con frecuencia por mi programador **MrTechX** Personalmente",
             fields: [{
                 name: "Bitcoin",
-                value: "41704.70 USD - 848522.99 MXN",
+                value: "50060.10 USD - 1028445.71 MXN",
             },
             {
                 name: "Ethereum",
-                value: "2848.04 USD - 57946.16 MXN",
+                value: "3430.19 USD - 70470.58 MXN",
             },
             {
                 name: "Monero",
-                value: "231.5 USD - 4710.09 MXN",
+                value: "266.8 USD - 5481.20 MXN",
             },
             {
                 name: "Litecoin",
-                value: "143.89 USD - 2927.58 MXN",
+                value: "168.73 USD - 3466.43 MXN",
             },
             {
                 name: "Dogecoin",
-                value: "0.21 USD - 4.27 MXN",
+                value: "0.22 USD - 4.52 MXN",
         }
         ],
         timestamp: new Date(),
         footer: {
             icon_url: client.user.avatarURL(),
-            text: "Mr.Assistant | Actualizacion 28/Sep/2021"
+            text: "Mr.Assistant | Actualizacion 05/Oct/2021"
             }
         }
         });
@@ -479,7 +479,7 @@ if(message.content.startsWith(prefix + "horario")) {
         .setColor(color)
         .setDescription("Toma tu horario, los links no los tengo ya que tus maestros los cambian a cada rato")
         .setFooter("MrAssistant | Tu Horario", client.user.avatarURL())
-        .setImage('https://cdn.discordapp.com/attachments/761331648452362320/888428052806258758/unknown.png')
+        .setImage('https://cdn.discordapp.com/attachments/761331648452362320/894949696903184444/horario.jpg')
         .setTimestamp()
     
     message.channel.send({ embed: embedDatos })
@@ -517,15 +517,15 @@ if(message.content.startsWith(prefix + "horario")) {
                     name: client.user.username,
                     icon_url: client.user.avatarURL()
                 },
-                Title: "Nueva Acutualizacion | Comandos de diversion",
+                Title: "Nueva Acutualizacion | Comandos VIP",
                     description: "Hola soy MrAssistent y acabo de ser actualizado ```Ejecuta el comando m!cmds para ver el menú de comandos de la ultima actualización```",
                         fields: [{
-                            name: "v1.2.2",
-                            value: "Actualización de links, nuevos comandos, actualización de los precios de las criptomonedas, aumento de velocidad y funcionamiento, optimizacion de backend, mejora en la velocidad de respuesta.",
+                            name: "v1.2.3",
+                            value: "Actualización de links, actualización de los precios de las criptomonedas, aumento de velocidad y funcionamiento, optimizacion de backend, mejora en la velocidad de respuesta, nuevos comandos VIP",
                         },
                         {
                             name: "Nuevos comandos",
-                            value: "0",
+                            value: "4 (VIP)",
                         },
                         {
                             name: "Comandos Actualizados",
@@ -539,7 +539,7 @@ if(message.content.startsWith(prefix + "horario")) {
                         timestamp: new Date(),
                             footer: {
                                 icon_url: client.user.avatarURL(),
-                                text: "Mr.Assistant | v1.2.2"
+                                text: "Mr.Assistant | v1.2.3"
                             }
             }
             });
@@ -580,7 +580,7 @@ if(message.content.startsWith(prefix + "horario")) {
     if (message.content.startsWith(prefix + "phcomment")) {
         message.delete()
         let txt = args.join('%20');
-        if (!txt) return message.channel.send("EROR 404")
+        if (!txt) return message.channel.send("EROR 404 | Debes insertar un mensaje para tu comentario, ejemplo: ```m!phcomment Holaaa```")
         let autor = message.author;    
         let attachment = new Discord.MessageAttachment(`https://nekobot.xyz/api/imagegen?type=phcomment&image=${message.author.displayAvatarURL()}&text=${txt}&username=${autor.username}&raw=1`,'logo.png')    
         message.channel.send(attachment)
@@ -651,6 +651,7 @@ if(message.content.startsWith(prefix + "horario")) {
             }
             });
     }
+//-------------------[Music Commands]---------------------
 //-------------------[Fin del codigo]---------------------
 });
 //Codigo para iniciar el bot
