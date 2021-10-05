@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant (Telegram Version)
-// VERSION : 1.0.6
+// VERSION : 1.0.7
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // HOLAA EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -33,15 +33,15 @@ const config = require("./config/config.json");
 const bot = new Telegraf(config.token);
 
 //----------------[Variables]----------------
-let btcvar = "41704.70 USD - 848522.99 MXN";
-let ethvar = "2848.04 USD - 57946.16 MXN";
-let xmrvar = "231.5 USD - 4710.09 MXN";
-let ltcnvar = "143.89 USD - 2927.58 MXN";
-let dogevar = "0.21 USD - 4.27 MXN";
-let fecha = "(actualización 28/Sep/2021)";
+let btcvar = "50060.10 USD - 1028445.71 MXN";
+let ethvar = "23430.19 USD - 70470.58 MXN";
+let xmrvar = "266.8 USD - 5481.20 MXN";
+let ltcnvar = "168.73 USD - 3466.43 MXN";
+let dogevar = "0.22 USD - 4.52 MXN";
+let fecha = "(actualización 05/Oct/2021)";
 
 let prefix = "m_"
-let version = "v1.0.6"
+let version = "v1.0.7"
 //--------------[Mensaje de Consola]--------------
 console.log("MrAssistant Activado");
 
@@ -115,7 +115,7 @@ bot.command('m_dev_networks', (ctx) => {
 
 //-------------------[VERSIONES]-------------------
 bot.command('m_version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.6 que fue lanzada el 22/Sep/2021 por TecnoProjects | @Mr_TechX")
+    ctx.reply("Actualmente estoy en mi verison 1.0.7 que fue lanzada el 05/Oct/2021 por TecnoProjects | @Mr_TechX")
 });
 
 bot.command('m_version_logs', (ctx) => {
