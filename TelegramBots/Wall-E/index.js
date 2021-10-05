@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Wall-E (Telegram Version)
-// VERSION : 1.0.5
+// VERSION : 1.0.6
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //----------------[ For Replit ]----------------
@@ -36,12 +36,12 @@ var prefix = "w_";
 var version = "v1.0.5"
 
 //----------------[Variables Crypto]----------------
-let btcvar = "41704.70 USD - 848522.99 MXN";
-let ethvar = "2848.04 USD - 57946.16 MXN";
-let xmrvar = "231.5 USD - 4710.09 MXN";
-let ltcnvar = "143.89 USD - 2927.58 MXN";
-let dogevar = "0.21 USD - 4.27 MXN";
-let fecha = "(actualización 28/Sep/2021)";
+let btcvar = "50060.10 USD - 1028445.71 MXN";
+let ethvar = "23430.19 USD - 70470.58 MXN";
+let xmrvar = "266.8 USD - 5481.20 MXN";
+let ltcnvar = "168.73 USD - 3466.43 MXN";
+let dogevar = "0.22 USD - 4.52 MXN";
+let fecha = "(actualización 05/Oct/2021)";
 
 //--------------[Mensaje de Consola]--------------
 console.log("Wall-E Activado");
@@ -99,11 +99,11 @@ bot.command('w_hola', (ctx) => {
 });
 
 bot.command('w_version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.5 que fue lanzada el 22/Sep/2021 por TecnoProjects | @Mr_TechX")
+    ctx.reply("Actualmente estoy en mi verison 1.0.6 que fue lanzada el 05/Oct/2021 por TecnoProjects | @Mr_TechX")
 });
 
 bot.command('w_version_logs', (ctx) => {
-    ctx.reply("REGISTRO DE MODIFICACIONES: \n\n• Nuevo comando /w_pescar \n• Modificacion de funcionamiento rapido \n• Mejoras internas a nivel de codigo \n\n• v1.0.4 - 17/sep/2021")
+    ctx.reply("REGISTRO DE MODIFICACIONES: \n\n• Nuevo comando /w_pescar \n• Modificacion de funcionamiento rapido \n• Mejoras internas a nivel de codigo \n\n• v1.0.6 - 05/Oct/2021")
 });
 
 bot.command('w_my_code', (ctx) => {
@@ -195,7 +195,7 @@ bot.command('w_precio_dogecoin', (ctx) => {
 });
 
 bot.command('w_cryptos', (ctx) => {
-    ctx.reply("ACTUALIZACIÓN 28 /Sep/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
+    ctx.reply("ACTUALIZACIÓN 05/Oct/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
 });
 
 //-----------------[Util / Extra]-----------------
