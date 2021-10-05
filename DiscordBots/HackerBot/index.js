@@ -1,7 +1,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : HackerBot
-// VERSION : 1.0.5
+// VERSION : 1.0.6
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // ----------------------- [Replit] ---------------------------
@@ -15,13 +15,14 @@
 // 	response.sendFile(__dirname + '/views/index.html');
 // });
 // app.listen(3000, () => console.log(`FUNCIONAMIENTO CORRECTO`));
+// console.log("v1.0.6");
 
 
 //-------------------[Codigo del bot]---------------------------
 // Constantes necesarias
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require("./config.json");
+const config = require("./config/config.json");
 
 // Variables necesarias de inicio
 let prefix = config.prefix;
@@ -137,7 +138,7 @@ if(message.content.startsWith(prefix + "bot_status")) {
         },
         {
             name: "Version de HackerBot",
-            value: "1.0.5"
+            value: "1.0.6"
         },
         {
             name: "Programado con:",
@@ -184,29 +185,29 @@ if(message.content.startsWith(prefix + "cryptos")){
         description: "Estos son los precios de las criptomonedas mas conocidas, esta informacion es actualizada con frecuencia por **Mr. TechX** personalmente",
         fields: [{
             name: "Bitcoin",
-                value: "41704.70 USD - 848522.99 MXN",
+                value: "50060.10 USD - 1028445.71 MXN",
             },
             {
                 name: "Ethereum",
-                value: "2848.04 USD - 57946.16 MXN",
+                value: "3430.19 USD - 70470.58 MXN",
             },
             {
                 name: "Monero",
-                value: "231.5 USD - 4710.09 MXN",
+                value: "266.8 USD - 5481.20 MXN",
             },
             {
                 name: "Litecoin",
-                value: "143.89 USD - 2927.58 MXN",
+                value: "168.73 USD - 3466.43 MXN",
             },
             {
                 name: "Dogecoin",
-                value: "0.21 USD - 4.27 MXN",
+                value: "0.22 USD - 4.52 MXN",
         }
         ],
         timestamp: new Date(),
         footer: {
             icon_url: client.user.avatarURL(),
-            text: "HackerBot | Actualizacion 28/Sep/2021"
+            text: "HackerBot | Actualizacion 05/Oct/2021"
         }
     }
     });
@@ -241,7 +242,7 @@ if(message.content.startsWith(prefix + "new_version")) {
             Title: "Nueva Acutualizacion | Cryptos",
                 description: "Saludos soy el HackerBot acabo de ser actualizado ```Ejecuta el comando ./cmds para ver el menú de comandos de la ultima actualización```",
                     fields: [{
-                        name: "v1.0.5",
+                        name: "v1.0.6",
                         value: "Actualización de los precios de las criptomonedas y mejor funcionalidad",
                     },
                     {
@@ -260,7 +261,7 @@ if(message.content.startsWith(prefix + "new_version")) {
                     timestamp: new Date(),
                         footer: {
                             icon_url: client.user.avatarURL(),
-                            text: "HackerBot | v1.0.5"
+                            text: "HackerBot | v1.0.6"
                         }
         }
         });
@@ -278,7 +279,7 @@ if(message.content.startsWith(prefix + "version")){
         description: "Mis version de codigo de bot",
         fields: [{
         name: "Version",
-        value: "Actualmente estoy en mi version 1.0.5 que fue lanzada el 22/Sep/2021 por TecnoProjects | MrTechX",
+        value: "Actualmente estoy en mi version 1.0.6 que fue lanzada el 05/Oct/2021 por TecnoProjects | MrTechX",
     }
     ],
     timestamp: new Date(),
