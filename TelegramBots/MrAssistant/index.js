@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant (Telegram Version)
-// VERSION : 1.0.7
+// VERSION : 1.0.8
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // HOLAA EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -24,7 +24,7 @@
 // app.get('/', function(request, response) {
 // 	response.sendFile(__dirname + '/views/index.html');
 // });
-// app.listen(3000, () => console.log(`FUNCIONAMIENTO CORRECTO`));
+// app.listen(3000, () => console.log(`v1.0.8`));
 
 //----------------[Codigo fuente]----------------
 //----------------[Constantes]----------------
@@ -33,15 +33,15 @@ const config = require("./config/config.json");
 const bot = new Telegraf(config.token);
 
 //----------------[Variables]----------------
-let btcvar = "50060.10 USD - 1028445.71 MXN";
-let ethvar = "23430.19 USD - 70470.58 MXN";
-let xmrvar = "266.8 USD - 5481.20 MXN";
-let ltcnvar = "168.73 USD - 3466.43 MXN";
-let dogevar = "0.22 USD - 4.52 MXN";
-let fecha = "(actualización 05/Oct/2021)";
+let btcvar = "55003.50 USD - 1139270.99 MXN";
+let ethvar = "3568.39 USD - 73910.99 MXN";
+let xmrvar = "278.2 USD - 5762.27 MXN";
+let ltcnvar = "178.28 USD - 3692.66 MXN";
+let dogevar = "0.24 USD - 4.97 MXN";
+let fecha = "(actualización 09/Oct/2021)";
 
 let prefix = "m_"
-let version = "v1.0.7"
+let version = "v1.0.8"
 //--------------[Mensaje de Consola]--------------
 console.log("MrAssistant Activado");
 
@@ -98,7 +98,7 @@ bot.command('m_pescar', (ctx) => {
 
 //-------------------[INFO]-------------------
 bot.command('m_status', (ctx) => {
-    ctx.reply("Todo bien por ahora, mi sistema funciona correctamente, quieres ver como funcionoo? ejecuta el comando /my_code y veras todas mis lineas de codigo :)")
+    ctx.reply("Todo bien por ahora, mi sistema funciona correctamente, quieres ver como funcionoo? ejecuta el comando /m_my_code y veras todas mis lineas de codigo :)")
 });
 
 bot.command('m_my_code', (ctx) => {
@@ -115,11 +115,11 @@ bot.command('m_dev_networks', (ctx) => {
 
 //-------------------[VERSIONES]-------------------
 bot.command('m_version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.7 que fue lanzada el 05/Oct/2021 por TecnoProjects | @Mr_TechX")
+    ctx.reply("Actualmente estoy en mi verison 1.0.8 que fue lanzada el 09/Oct/2021 por TecnoProjects | @Mr_TechX")
 });
 
 bot.command('m_version_logs', (ctx) => {
-    ctx.reply("Actualiazación de comandos, mejora de funcionamiento y modificaciones internas")
+    ctx.reply("Actualiazación de comandos, mejora de funcionamiento, comandos VIP, actualizacion del precio de las /m_cryptos y modificaciones internas")
 });
 
 //-------------------[PRUEBAS]-------------------
@@ -158,7 +158,7 @@ bot.command('m_precio_dogecoin', (ctx) => {
 });
 
 bot.command('m_cryptos', (ctx) => {
-    ctx.reply("ACTUALIZACIÓN 22/sep/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
+    ctx.reply("ACTUALIZACIÓN 09/Oct/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
 });
 
 //-------------------[UTIL & EXTRA]-------------------
@@ -174,8 +174,9 @@ bot.command('m_chat_muerto', (ctx) => {
 
 //-------------------[SCHOOL CLASS]-------------------
 bot.command('m_horario', (ctx) => {
-    let horarioimg = "https://raw.githubusercontent.com/Mr-TechX/MrAssistantTelegram/v1.0.0/img/Horario.jpg"
-            ctx.replyWithPhoto(horarioimg)
+    let horarioimg = "https://github.com/Mr-TechX/MrAssistantTelegram/blob/v1.0.0/img/Horario.jpg?raw=true"
+    ctx.replyWithPhoto(horarioimg)
+    ctx.reply("Te doy solo la tabla, por que tus maestros cambian los links a cada rato :)")
 });
 
 //-------------------[SUPPORT]-------------------
