@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Wall-E (Telegram Version)
-// VERSION : 1.0.6
+// VERSION : 1.0.7
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //----------------[ For Replit ]----------------
@@ -22,7 +22,7 @@
 // app.get('/', function(request, response) {
 // 	response.sendFile(__dirname + '/views/index.html');
 // });
-// app.listen(3000, () => console.log(`FUNCIONAMIENTO CORRECTO`));
+// app.listen(3000, () => console.log(`v1.0.7`));
 
 //----------------[Codigo fuente]----------------
 
@@ -33,15 +33,15 @@ const bot = new Telegraf(config.token);
 
 //----------------[Variables]----------------
 var prefix = "w_";
-var version = "v1.0.5"
+var version = "v1.0.7";
 
 //----------------[Variables Crypto]----------------
-let btcvar = "50060.10 USD - 1028445.71 MXN";
-let ethvar = "23430.19 USD - 70470.58 MXN";
-let xmrvar = "266.8 USD - 5481.20 MXN";
-let ltcnvar = "168.73 USD - 3466.43 MXN";
-let dogevar = "0.22 USD - 4.52 MXN";
-let fecha = "(actualización 05/Oct/2021)";
+let btcvar = "61109.80 USD - 1243046.66 MXN";
+let ethvar = "4474.45 USD - 91015.68 MXN";
+let xmrvar = "258.5 USD - 5258.20 MXN";
+let ltcnvar = "198.32 USD - 4034.07 MXN";
+let dogevar = "0.26 USD - 5.29 MXN";
+let fecha = "(Actualización 5/Nov/2021)";
 
 //--------------[Mensaje de Consola]--------------
 console.log("Wall-E Activado");
@@ -87,7 +87,7 @@ bot.start((ctx) => {
     console.log(ctx.message)
     console.log(ctx.updateSubTypes)
 
-    ctx.reply('Holii!! Bienvenid@ ' + ctx.from.first_name + ',' + ' yo soy Wall-E, soy un Bot :), puedes ejecutar el comando /w_all_cmds para ver todos mis comandos o usa /w_menu para ver el menu de comandos simple :) tkm')
+    ctx.reply('Holii!! Bienvenid@ ' + ctx.from.first_name + ',' + ' yo soy Wall-E, soy un Bot :), puedes ejecutar el comando /w_all_cmds para ver todos mis comandos o usa /w_menu para ver el menu de comandos simple :) tkm \n\nO si eres un usuario VIP escribe /w_SoyVip')
 });
 
 bot.command('w_status', (ctx) => {
@@ -99,11 +99,11 @@ bot.command('w_hola', (ctx) => {
 });
 
 bot.command('w_version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.6 que fue lanzada el 05/Oct/2021 por TecnoProjects | @Mr_TechX")
+    ctx.reply("Actualmente estoy en mi verison 1.0.7 que fue lanzada el 18/Oct/2021 por TecnoProjects | @Mr_TechX")
 });
 
 bot.command('w_version_logs', (ctx) => {
-    ctx.reply("REGISTRO DE MODIFICACIONES: \n\n• Nuevo comando /w_pescar \n• Modificacion de funcionamiento rapido \n• Mejoras internas a nivel de codigo \n\n• v1.0.6 - 05/Oct/2021")
+    ctx.reply("REGISTRO DE MODIFICACIONES: \n\n• Nuevos comandos VIP /w_SoyVip \n• Modificacion de funcionamiento rapido \n• Actualización de las /w_cryptos \n• Mejoras internas a nivel de codigo \n\n• v1.0.7 - 18/Oct/2021")
 });
 
 bot.command('w_my_code', (ctx) => {
@@ -116,7 +116,7 @@ bot.command('w_my_developer', (ctx) => {
 
 //-----------------[Developer]-----------------
 bot.command('w_dev_networks', (ctx) => {
-    ctx.reply("Redes Sociales de mi programador: \n\nTwitter - http://bit.ly/twittechX \n\nInstagram - https://bit.ly/ig_techx \n\nDiscord Server - https://bit.ly/3vcdM5j \n\nTelegram - @Mr_TechX \n\nGrupo de Telegram - https://t.me/TechX_Army \n\nGithub - bit.ly/github_techX \n\nTecnoProjects - https://github.com/TecnoProjects \n\nPortafolio - https://bit.ly/UlisesCamacho_portafolio \n\nContacto - beacons.ai/ulisescamacho")
+    ctx.reply("Redes Sociales de mi programador: \n\nTwitter - http://bit.ly/twittechX \n\nInstagram - https://bit.ly/ig_techx \n\nDiscord Server - https://bit.ly/3vcdM5j \n\nTelegram - @Mr_TechX \n\nGrupo de Telegram - https://t.me/TechX_Army \n\nGithub - bit.ly/github_techX \n\nTecnoProjects - https://github.com/TecnoProjects \n\nPortafolio - https://bit.ly/UlisesCamacho_portafolio \n\nContacto - beacons.ai/ulisescamacho \n\nWeb de TecnoProjects - ")
 });
 
 //-----------------[Diversion]-----------------
@@ -150,8 +150,15 @@ bot.command('w_pescar', (ctx) => {
 });
 
 //-----------------[Dross]-----------------
+//-----------------[Dross VIPS]-----------------
+//tania = "TaniaYepezestrellafugaz"
+//aitor = "AitorLinkinPark"
+//techX = "Mr_TechX"
+//naye = "UnaTalNaye"
+
+//-----------------[Dross cmds]-----------------
 bot.command('dross_cmds', (ctx) => {
-    ctx.reply("*MIS COMANDOS DEL GRUPO SON:* \n\n/grupos - para obtener los links a nuestros grupos de facebook \n\n/reglas - Para ver el reglamento del grupo")
+    ctx.reply("*MIS COMANDOS DEL GRUPO SON:* \n\n• /grupos - para obtener los links a nuestros grupos de facebook \n\n• /reglas - Para ver el reglamento del grupo \n\n• /w_hello - Para saludar a todo el grupo")
 });
 
 bot.command('grupos', (ctx) => {
@@ -159,7 +166,16 @@ bot.command('grupos', (ctx) => {
 });
 
 bot.command('reglas', (ctx) => {
-    ctx.reply("Este grupo es creado para divertirse, con el fin de salir de la rutina y entretenerse un rato😁 \nREGLAS DEL GRUPO \n\n● Presentarse con foto, nombre, país y edad \n\n● No subir porno \n\n● No faltar al respeto a nadie \n\n● No discriminación \n\n● Prohibido el spam \n\n● En caso de una pelea entre los integrantes del grupo, si no entienden se eliminarán \n\n● Si no se presentan dentro de los 10 min serán eliminados \n\n● Prohibido subir imágenes de cualquier religión. \n\n● Prohibido el gore")
+        ctx.reply("Este grupo es creado para divertirse, con el fin de salir de la rutina y entretenerse un rato😁 \nREGLAS DEL GRUPO \n\n● Presentarse con foto, nombre, país y edad \n\n● No subir porno \n\n● No faltar al respeto a nadie \n\n● No discriminación \n\n● Prohibido el spam \n\n● En caso de una pelea entre los integrantes del grupo, si no entienden se eliminarán \n\n● Si no se presentan dentro de los 10 min serán eliminados \n\n● Prohibido subir imágenes de cualquier religión. \n\n● Prohibido el gore")
+
+});
+
+bot.command('w_hello', (ctx) => {
+    console.log(ctx.form)
+    console.log(ctx.chat)
+    console.log(ctx.message)
+    console.log(ctx.updateSubTypes)
+    ctx.reply("Hola a todos :) Wall-E les manda un saludo a todos ustedes😊")
 });
 
 //-----------------[Util / Extra]-----------------
@@ -168,7 +184,6 @@ bot.command('w_chat_muerto', (ctx) => {
     let img2 = "https://raw.githubusercontent.com/Mr-TechX/Wall-E_Telegram/v1.0.0/img/chatm2.png"
     let respuesta = [img1, img2]
     var random = respuesta[Math.floor(Math.random() * respuesta.length)]
-    ctx.deleteMessage
     ctx.reply("EFECTIVAMENTE CHAT MUERTO")
     ctx.replyWithPhoto(`${random}`)
 });
@@ -195,17 +210,73 @@ bot.command('w_precio_dogecoin', (ctx) => {
 });
 
 bot.command('w_cryptos', (ctx) => {
-    ctx.reply("ACTUALIZACIÓN 05/Oct/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
+    ctx.reply(fecha + "\n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
 });
 
-//-----------------[Util / Extra]-----------------
+//-----------------[ VIP ]-----------------
+//----------------[VIP USERS]----------------
+// var Dani = "1379122676";
+// var TechX = "1559770723";
+// var Bryan = "1335787282";
+// var Julio = "1217556422";
+// var Piter = "1594638516";
+
+// var DaniUser = "daniela_ortiz_UwU";
+// var TechXUser = "Mr_TechX";
+// var BryanUser = "Bryan_ILC";
+// var JulioUser = "ElpeinadoJR16";
+
+//----------------[VIP MENU]----------------
+bot.command('w_vip', (ctx) => {
+    let noVIP = "Mentiroso, tu no eres VIP, no puedes engañar un Bot😎, Bye putito🖕🏻";
+    let noVIPconsole = "El usuario " + ctx.from.username + " intento hacerse pasar por un VIP " + "(" + ctx.from.first_name + ")";
+        if(ctx.from.username === "daniela_ortiz_UwU" || ctx.from.username === "Bryan_ILC" || ctx.from.username === "ElpeinadoJR16" || ctx.from.username === "Mr_TechX" || ctx.from.id == "1594638516") {
+            ctx.reply("LOS COMANDOS VIP SON: \n\n• /w_horario - para ver tu horario de clases :) \n• /w_SoyVip - Inicio de un VIP \n• PROXIMAMENTE \n\n• Puedes enviar sugerencias para comandos VIP a @Mr_TechX")
+        } 
+        else {
+            ctx.reply(noVIP)
+            console.log(noVIPconsole)
+        }
+});
+
+//----------------[VIP CMDS]----------------
 bot.command('w_horario', (ctx) => {
-    let horarioimg = "https://raw.githubusercontent.com/Mr-TechX/MrAssistantTelegram/v1.0.0/img/Horario.jpg"
-        if(ctx.from.username == "Mr_TechX"){
-            ctx.replyWithPhoto(horarioimg)
+    let noVIP = "Mentiroso, tu no eres VIP, no puedes engañar un Bot😎, Bye putito🖕🏻";
+    let noVIPconsole = "El usuario " + ctx.from.username + " intento hacerse pasar por un VIP " + "(" + ctx.from.first_name + ")";
+    let horarioTechX = "https://github.com/Mr-TechX/MrAssistantTelegram/blob/v1.0.0/img/Horario.jpg?raw=true";
+    let horarioBryan = "https://github.com/Mr-TechX/MrAssistantTelegram/blob/v1.0.0/img/Br_Horario.jpg?raw=true";
+    let horarioJulio = "https://github.com/Mr-TechX/MrAssistantTelegram/blob/v1.0.0/img/Julio-horario.jpg?raw=true";
+    let msg = "Te doy solo la tabla, por que tus maestros cambian los links a cada rato :)";
+
+        if(ctx.from.username == "Bryan_ILC"){
+            ctx.replyWithPhoto(horarioBryan)
+            ctx.reply(msg)
+            console.log("El horario de Bryan fue entregado a " + ctx.from.username)
+        }
+        else if(ctx.from.username == "ElpeinadoJR16") {
+            ctx.replyWithPhoto(horarioJulio)
+            ctx.reply("Toma tu horario " + ctx.from.first_name + " :)")
+            console.log("El horario de Julio fue entregado a " + ctx.from.username)
+        }
+        else if(ctx.from.username == "daniela_ortiz_UwU", "Mr_TechX" || ctx.from.id == "1594638516") {
+            ctx.replyWithPhoto(horarioTechX)
+            ctx.reply(msg)
+            console.log("El horario de TechX fue entregado a " + ctx.from.username)
+        }
+        else {
+            ctx.reply(noVIP)
+            console.log(noVIPconsole)
+        }
+});
+
+bot.command('w_SoyVip', (ctx) => {
+    if(ctx.from.username === "daniela_ortiz_UwU" || ctx.from.username === "Bryan_ILC" || ctx.from.username === "ElpeinadoJR16" || ctx.from.username === "Mr_TechX" || ctx.from.id == "1594638516") {
+            ctx.reply("Holii " + ctx.from.first_name + " Eres un usuario VIP, eres mas importante para mi que todos los demás usuarios, tienes comandos que solo los VIP pueden usar, felicidades, me agradas y al parecer a mi programador también, tkm💛, Toma awita :) \n\nUsa /w_vip para ver los comandos VIP");
+            console.log("Ahora " + ctx.from.first_name + " Es un usuario VIP");
         }
         else{
-            ctx.reply("No tienes permiso de usar esto")
+            ctx.reply("Mentiroso, tu no eres VIP, no puedes engañar un Bot😎, Bye putito🖕🏻");
+            console.log(`El usuario ${ctx.from.username} intento hacerse pasar por un VIP (${ctx.from.first_name})`);
         }
 });
 
