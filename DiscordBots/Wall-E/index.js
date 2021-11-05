@@ -1,7 +1,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Wall-E
-// VERSION : 1.0.3
+// VERSION : 1.0.4
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -215,7 +215,7 @@ if(message.content.startsWith(prefix + "bot_status")) {
         },
         {
             name: "Version de Wall-E",
-            value: "1.0.3"
+            value: "1.0.4"
         },
         {
             name: "Programado con:",
@@ -303,7 +303,7 @@ if(message.content.startsWith(prefix + "new_version")) {
             Title: "Nueva Acutualizacion | Comandos de diversion",
                 description: "Hi soy Wall-E y me acaban de actualizar",
                     fields: [{
-                        name: "v1.0.3",
+                        name: "v1.0.4",
                         value: "Todos los comandos son nuevos",
                     },
                     {
@@ -322,7 +322,7 @@ if(message.content.startsWith(prefix + "new_version")) {
                     timestamp: new Date(),
                         footer: {
                             icon_url: client.user.avatarURL(),
-                            text: "Wall-E | v1.0.3"
+                            text: "Wall-E | v1.0.4"
                         }
         }
         });
@@ -432,7 +432,7 @@ if(message.content.startsWith(prefix + "telegram_v")) {
         .setTitle("Wall-E | Telegram Version")
         .setAuthor(client.user.username, client.user.avatarURL())
         .setColor(color)
-        .setDescription("Actualmente Wall-E en telegram funciona con la version 1.0.4 lanzada el 17/Sep/2021")
+        .setDescription("Actualmente Wall-E en telegram funciona con la version 1.0.7 lanzada el 5/Nov/2021")
         .setFooter("Wall-E", client.user.avatarURL())
         .setImage('https://cdn.discordapp.com/attachments/761331648452362320/883014770725376010/v.png')
         .setTimestamp()
