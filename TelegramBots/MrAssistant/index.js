@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant (Telegram Version)
-// VERSION : 1.0.8
+// VERSION : 1.0.9
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // HOLAA EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -24,7 +24,7 @@
 // app.get('/', function(request, response) {
 // 	response.sendFile(__dirname + '/views/index.html');
 // });
-// app.listen(3000, () => console.log(`v1.0.8`));
+// app.listen(3000, () => console.log(`v1.0.9));
 
 //----------------[Codigo fuente]----------------
 //----------------[Constantes]----------------
@@ -33,15 +33,15 @@ const config = require("./config/config.json");
 const bot = new Telegraf(config.token);
 
 //----------------[Variables]----------------
-let btcvar = "55003.50 USD - 1139270.99 MXN";
-let ethvar = "3568.39 USD - 73910.99 MXN";
-let xmrvar = "278.2 USD - 5762.27 MXN";
-let ltcnvar = "178.28 USD - 3692.66 MXN";
-let dogevar = "0.24 USD - 4.97 MXN";
-let fecha = "(actualización 09/Oct/2021)";
+let btcvar = "61109.80 USD - 1243046.66 MXN";
+let ethvar = "4474.45 USD - 91015.68 MXN";
+let xmrvar = "258.5 USD - 5258.20 MXN";
+let ltcnvar = "198.32 USD - 4034.07 MXN";
+let dogevar = "0.26 USD - 5.29 MXN";
+let fecha = "(Actualización 5/Nov/2021)";
 
 let prefix = "m_"
-let version = "v1.0.8"
+let version = "v1.0.9"
 //--------------[Mensaje de Consola]--------------
 console.log("MrAssistant Activado");
 
@@ -115,7 +115,7 @@ bot.command('m_dev_networks', (ctx) => {
 
 //-------------------[VERSIONES]-------------------
 bot.command('m_version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.8 que fue lanzada el 09/Oct/2021 por TecnoProjects | @Mr_TechX")
+    ctx.reply("Actualmente estoy en mi verison 1.0.9 que fue lanzada el 5/Nov/2021 por TecnoProjects | @Mr_TechX")
 });
 
 bot.command('m_version_logs', (ctx) => {
@@ -158,7 +158,7 @@ bot.command('m_precio_dogecoin', (ctx) => {
 });
 
 bot.command('m_cryptos', (ctx) => {
-    ctx.reply("ACTUALIZACIÓN 09/Oct/2021 \n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
+    ctx.reply(fecha + "\n\n" + "Bitcoin | " + btcvar + "\n" + "Ethereum | " + ethvar + "\n" + "Monero | " + xmrvar + "\n" + "Litecoin | " + ltcnvar + "\n" + "Dogecoin | " + dogevar)
 });
 
 //-------------------[UTIL & EXTRA]-------------------
