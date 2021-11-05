@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant
-// VERSION : 1.2.3
+// VERSION : 1.2.4
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // ----------------------- [Replit] ---------------------------
@@ -262,7 +262,7 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Mis version de codigo de bot",
             fields: [{
             name: "Version",
-            value: "Actualmente estoy en mi version 1.2.3 que fue lanzada el 5/Oct/2021 por TecnoProjects | MrTechX",
+            value: "Actualmente estoy en mi version 1.2.4 que fue lanzada el 5/Nov/2021 por TecnoProjects | MrTechX",
         },
         {
             name: "Codigo Fuente",
@@ -289,7 +289,7 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Estos son los precios de las criptomonedas, esta informacion es actualizada con frecuencia por mi programador",
             fields: [{
             name: "Version",
-            value: "Actualmente estoy en mi version 1.0.7 que fue lanzada el 5/Oct/2021 por TecnoProjects | MrTechX",
+            value: "Actualmente estoy en mi version 1.0.9 que fue lanzada el 5/Nov/2021 por TecnoProjects | MrTechX",
         },
         {
             name: "Codigo Fuente",
@@ -382,7 +382,7 @@ if(message.content.startsWith(prefix + "cmds")){
             },
             {
                 name: "Version de MrAssistant",
-                value: "1.2.3"
+                value: "1.2.4"
             },
             {
                 name: "Programado con:",
@@ -414,29 +414,29 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Estos son los precios de las criptomonedas, esta informacion es actualizada con frecuencia por mi programador **MrTechX** Personalmente",
             fields: [{
                 name: "Bitcoin",
-                value: "50060.10 USD - 1028445.71 MXN",
+                value: "61109.80 USD - 1243046.66 MXN",
             },
             {
                 name: "Ethereum",
-                value: "3430.19 USD - 70470.58 MXN",
+                value: "4474.45 USD - 91015.68 MXN",
             },
             {
                 name: "Monero",
-                value: "266.8 USD - 5481.20 MXN",
+                value: "258.5 USD - 5258.20 MXN",
             },
             {
                 name: "Litecoin",
-                value: "168.73 USD - 3466.43 MXN",
+                value: "198.32 USD - 4034.07 MXN",
             },
             {
                 name: "Dogecoin",
-                value: "0.22 USD - 4.52 MXN",
+                value: "0.26 USD - 5.29 MXN",
         }
         ],
         timestamp: new Date(),
         footer: {
             icon_url: client.user.avatarURL(),
-            text: "Mr.Assistant | Actualizacion 05/Oct/2021"
+            text: "Mr.Assistant | Actualizacion 05/Nov/2021"
             }
         }
         });
@@ -539,7 +539,7 @@ if(message.content.startsWith(prefix + "horario")) {
                         timestamp: new Date(),
                             footer: {
                                 icon_url: client.user.avatarURL(),
-                                text: "Mr.Assistant | v1.2.3"
+                                text: "Mr.Assistant | v1.2.4"
                             }
             }
             });
