@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant
-// VERSION : 1.2.4
+// VERSION : 1.2.5
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // ----------------------- [Replit] ---------------------------
@@ -262,7 +262,7 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Mis version de codigo de bot",
             fields: [{
             name: "Version",
-            value: "Actualmente estoy en mi version 1.2.4 que fue lanzada el 5/Nov/2021 por TecnoProjects | MrTechX",
+            value: "Actualmente estoy en mi version 1.2.5 que fue lanzada el 29/Dic/2021 por TecnoProjects | MrTechX",
         },
         {
             name: "Codigo Fuente",
@@ -289,7 +289,7 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Estos son los precios de las criptomonedas, esta informacion es actualizada con frecuencia por mi programador",
             fields: [{
             name: "Version",
-            value: "Actualmente estoy en mi version 1.0.9 que fue lanzada el 5/Nov/2021 por TecnoProjects | MrTechX",
+            value: "Actualmente estoy en mi version 1.1.0 que fue lanzada el 29/Dic/2021 por TecnoProjects Security | MrTechX",
         },
         {
             name: "Codigo Fuente",
@@ -370,7 +370,7 @@ if(message.content.startsWith(prefix + "cmds")){
             },
             {
                 name: "Comandos en mantenimiento",
-                value: "5 Comandos en mantenimiento",
+                value: "2 Comandos en mantenimiento",
             },
             {
                 name: "Comandos dañados",
@@ -378,11 +378,11 @@ if(message.content.startsWith(prefix + "cmds")){
             },
             {
                 name: "Comandos en creación",
-                value: "1 Comandos en creación",
+                value: "5 Comandos en creación",
             },
             {
                 name: "Version de MrAssistant",
-                value: "1.2.4"
+                value: "1.2.5"
             },
             {
                 name: "Programado con:",
@@ -414,29 +414,29 @@ if(message.content.startsWith(prefix + "cmds")){
             description: "Estos son los precios de las criptomonedas, esta informacion es actualizada con frecuencia por mi programador **MrTechX** Personalmente",
             fields: [{
                 name: "Bitcoin",
-                value: "61109.80 USD - 1243046.66 MXN",
+                value: "47238.10 USD - 971720.78 MXN",
             },
             {
                 name: "Ethereum",
-                value: "4474.45 USD - 91015.68 MXN",
+                value: "3725.56 USD - 76637.38 MXN",
             },
             {
                 name: "Monero",
-                value: "258.5 USD - 5258.20 MXN",
+                value: "213.04 USD - 4382.38 MXN",
             },
             {
                 name: "Litecoin",
-                value: "198.32 USD - 4034.07 MXN",
+                value: "148.69 USD - 3058.66 MXN",
             },
             {
                 name: "Dogecoin",
-                value: "0.26 USD - 5.29 MXN",
+                value: "0.17 USD - 3.50 MXN",
         }
         ],
         timestamp: new Date(),
         footer: {
             icon_url: client.user.avatarURL(),
-            text: "Mr.Assistant | Actualizacion 05/Nov/2021"
+            text: "Mr.Assistant | Actualizacion 29/Dic/2021"
             }
         }
         });
@@ -477,7 +477,7 @@ if(message.content.startsWith(prefix + "horario")) {
         .setTitle("Horario 5B INST del CECyTE")
         .setAuthor(client.user.username, client.user.avatarURL())
         .setColor(color)
-        .setDescription("Toma tu horario, los links no los tengo ya que tus maestros los cambian a cada rato")
+        .setDescription("Estás apunto de cambiar de semestre, cuando tenga tu horario te lo actualizo")
         .setFooter("MrAssistant | Tu Horario", client.user.avatarURL())
         .setImage('https://cdn.discordapp.com/attachments/761331648452362320/894949696903184444/horario.jpg')
         .setTimestamp()
@@ -520,16 +520,16 @@ if(message.content.startsWith(prefix + "horario")) {
                 Title: "Nueva Acutualizacion | Comandos VIP",
                     description: "Hola soy MrAssistent y acabo de ser actualizado ```Ejecuta el comando m!cmds para ver el menú de comandos de la ultima actualización```",
                         fields: [{
-                            name: "v1.2.3",
+                            name: "v1.2.5",
                             value: "Actualización de links, actualización de los precios de las criptomonedas, aumento de velocidad y funcionamiento, optimizacion de backend, mejora en la velocidad de respuesta, nuevos comandos VIP",
                         },
                         {
                             name: "Nuevos comandos",
-                            value: "4 (VIP)",
+                            value: "1",
                         },
                         {
                             name: "Comandos Actualizados",
-                            value: "8",
+                            value: "9",
                         },
                         {
                             name: "Especificación de actualización de comandos",
@@ -539,7 +539,7 @@ if(message.content.startsWith(prefix + "horario")) {
                         timestamp: new Date(),
                             footer: {
                                 icon_url: client.user.avatarURL(),
-                                text: "Mr.Assistant | v1.2.4"
+                                text: "Mr.Assistant | v1.2.5"
                             }
             }
             });
