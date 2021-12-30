@@ -1,7 +1,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : HackerBot
-// VERSION : 1.0.7
+// VERSION : 1.0.8
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // ----------------------- [Replit] ---------------------------
@@ -15,18 +15,20 @@
 // 	response.sendFile(__dirname + '/views/index.html');
 // });
 // app.listen(3000, () => console.log(`FUNCIONAMIENTO CORRECTO`));
-// console.log("v1.0.7");
+// console.log("v1.0.8");
 
 
 //-------------------[Codigo del bot]---------------------------
 // Constantes necesarias
 const Discord = require("discord.js");
+const db = require('megadb');
 const client = new Discord.Client();
 const config = require("./config/config.json");
 
 // Variables necesarias de inicio
 let prefix = config.prefix;
 let color = 0x00FE00;
+let vip = new db.crearDB('vip');
 
 // Presencia del bot
 client.on('ready', () => {
@@ -64,6 +66,7 @@ client.on('message', (message) => {
     let texto = args.join(" ");
 
     if(message.content.startsWith(prefix + "say")) {
+        if (message.author.id !== '829872566088237056') return;
         if(!texto) return message.channel.send(`ERROR 101101`);
         message.delete()
         message.channel.send(texto);
@@ -85,15 +88,71 @@ client.on('message', (message) => {
 if(message.content.startsWith(prefix + "cmds")) {
     message.channel.send({embed: {
         color: color,
-        description: "mi lista de comandos es: ```say, cmds, status, bot_status, ping, server_status, cryptos, invite, esay, version```"
+        author: {
+            name: client.user.username,
+            icon_url: client.user.avatarURL()
+        },
+        title: "HackerBot Comandos [prefijo ./]",
+        description: "Listado de comandos de HackerBot",
+        fields: [{
+            name: "say",
+            value: "Hacker bot repite lo que escribas despues del comando (Comando vip)",
+        },
+        {
+            name: "cmds",
+            value: "Muestra el lsitado de comandos vip y publicos",
+        },
+        {
+            name: "status",
+            value: "El estado del servidor del bot",
+        },
+        {
+            name: "ping",
+            value: "Menciona a todos los usuarios del servidor (Comando vip)",
+        },
+        {
+            name: "server_status",
+            value: "Muestra el estado del servidor discord en el que se ejecute el comando",
+        },
+        {
+            name: "cryptos",
+            value: "Muestra la ultima actualizacion de los precios de las cryptomonedas mas conocidas hecha por MrTechX"
+        },
+        {
+            name: "invite",
+            value: "HackerBot te da su enlace de invitacion para agregarlo a tu servidor"
+        },
+        {
+            name: "esay",
+            value: "HackerBot repite todo lo escrito despues del comando y lo envia en un mensaje embed"
+        },
+        {
+            name: "version",
+            value: "HackerBot te muesta la version de codigo que tiene"
+        },
+        {
+            name: "AddVip",
+            value: "Agrega usuarios vip para usar los comandos vip de HaackerBot (Comando para CEO)"
+        },
+        {
+            name: "RmVip",
+            value: "Elimina un usuario de la lista VIP (Comando para CEO)"
+        }
+    ],
+    timestamp: new Date(),
+    footer: {
+        icon_url: client.user.avatarURL(),
+        text: "HackerBot | Comandos"
+    }
     }
     });
 }
 
 // comandos respuesta simple
-    if(message.content.startsWith(prefix + "ping")) {
-        message.channel.send("@everyone Hola a Todos, Soy HackerBot :sunglasses:");
-    }
+if(message.content.startsWith(prefix + "ping")) {
+    if (message.author.id !== '829872566088237056') return;
+    message.channel.send("@everyone Hola a Todos, Soy HackerBot :sunglasses:");
+}
 
 // Respuesta de embed simple
 if(message.content.startsWith(prefix + "status")) {
@@ -114,7 +173,6 @@ if(message.content.startsWith(prefix + "bot_status")) {
             icon_url: client.user.avatarURL()
         },
         title: "HackerBot Status",
-        url: "#",
         description: "Estado del Bot",
         fields: [{
             name: "El estado actual de HackerBot",
@@ -122,7 +180,7 @@ if(message.content.startsWith(prefix + "bot_status")) {
         },
         {
             name: "Numero de comandos funcionando",
-            value: "8 Comandos funcionan",
+            value: "9 Comandos funcionan",
         },
         {
             name: "Comandos en mantenimiento",
@@ -134,11 +192,11 @@ if(message.content.startsWith(prefix + "bot_status")) {
         },
         {
             name: "Comandos en creación",
-            value: "0 Comandos en creación",
+            value: "7 Comandos en creación",
         },
         {
             name: "Version de HackerBot",
-            value: "1.0.7"
+            value: "1.0.8"
         },
         {
             name: "Programado con:",
@@ -146,7 +204,7 @@ if(message.content.startsWith(prefix + "bot_status")) {
         },
         {
             name: "Autor de HakerBot",
-            value: "Mr. TechX | TecnoProjects"
+            value: "Mr. TechX | TecnoProjects Security"
         },
     ],
     timestamp: new Date(),
@@ -185,29 +243,29 @@ if(message.content.startsWith(prefix + "cryptos")){
         description: "Estos son los precios de las criptomonedas mas conocidas, esta informacion es actualizada con frecuencia por **Mr. TechX** personalmente",
         fields: [{
             name: "Bitcoin",
-                value: "61109.80 USD - 1243046.66 MXN",
+                value: "47238.10 USD - 971720.78 MXN",
             },
             {
                 name: "Ethereum",
-                value: "4474.45 USD - 91015.68 MXN",
+                value: "3725.56 USD - 76637.38 MXN",
             },
             {
                 name: "Monero",
-                value: "258.5 USD - 5258.20 MXN",
+                value: "213.04 USD - 4382.38 MXN",
             },
             {
                 name: "Litecoin",
-                value: "198.32 USD - 4034.07 MXN",
+                value: "148.69 USD - 3058.66 MXN",
             },
             {
                 name: "Dogecoin",
-                value: "0.26 USD - 5.29 MXN",
+                value: "0.17 USD - 3.50 MXN",
         }
         ],
         timestamp: new Date(),
         footer: {
             icon_url: client.user.avatarURL(),
-            text: "HackerBot | Actualizacion 05/Nov/2021"
+            text: "HackerBot | Actualizacion 29/Dic/2021"
         }
     }
     });
@@ -239,19 +297,19 @@ if(message.content.startsWith(prefix + "new_version")) {
                 name: client.user.username,
                 icon_url: client.user.avatarURL()
             },
-            Title: "Nueva Acutualizacion | Cryptos",
-                description: "Saludos soy el HackerBot acabo de ser actualizado ```Ejecuta el comando ./cmds para ver el menú de comandos de la ultima actualización```",
+            Title: "Nueva Acutualizacion | Cryptos && New commands",
+                description: "Saludos soy HackerBot acabo de ser actualizado ```Ejecuta el comando ./cmds para ver el menú de comandos de la ultima actualización```",
                     fields: [{
-                        name: "v1.0.7",
-                        value: "Actualización de los precios de las criptomonedas y mejor funcionalidad",
+                        name: "v1.0.8",
+                        value: "Actualización de los precios de las criptomonedas, nuevos comandos y mejor funcionalidad",
                     },
                     {
                         name: "Nuevos comandos",
-                        value: "comandos VIP",
+                        value: "comandos VIP, AddVip, RmVip",
                     },
                     {
                         name: "Comandos Actualizados",
-                        value: "5",
+                        value: "3",
                     },
                     {
                         name: "Especificación de actualización de comandos",
@@ -261,7 +319,7 @@ if(message.content.startsWith(prefix + "new_version")) {
                     timestamp: new Date(),
                         footer: {
                             icon_url: client.user.avatarURL(),
-                            text: "HackerBot | v1.0.7"
+                            text: "HackerBot | v1.0.8"
                         }
         }
         });
@@ -279,7 +337,7 @@ if(message.content.startsWith(prefix + "version")){
         description: "Mis version de codigo de bot",
         fields: [{
         name: "Version",
-        value: "Actualmente estoy en mi version 1.0.7 que fue lanzada el 05/Oct/2021 por TecnoProjects | MrTechX",
+        value: "Actualmente estoy en mi version 1.0.8 que fue lanzada el 29/Dic/2021 por TecnoProjects Security | MrTechX",
     }
     ],
     timestamp: new Date(),
@@ -290,6 +348,37 @@ if(message.content.startsWith(prefix + "version")){
     }
     });
 }
+
+if(message.content.startsWith(prefix + "AddVip")) {
+    var id = ["829872566088237056"]
+    if(!id.some(id => message.author.id == id)) return message.channel.send("No tienes acceso a este comando.")
+        let user = message.mentions.members.first();
+        if(!user) return message.channel.send ("__¡Debes mencionar a un usuario!__")
+        if(vip.has(user.id))return message.channel.send("__**Este usuario ya esta registrado.**__")
+        vip.establecer(user.id, user.user.tag);
+        message.channel.send(
+            new discord.MessageEmbed()
+            .setDescription("__"+user.user.tag+"__ **ha sido añadido a los usuarios VIP.**")
+            .setColor(color)
+        )
+}
+
+if(message.content.startsWith(prefix + "RmVip")) {
+    var id = ["829872566088237056"]
+    if(!id.some(id => message.author.id == id)) return message.channel.send("No tienes acceso a este comando.")
+    let user = message.mentions.members.first();
+    if(message.mentions.users.size < 1 || !user) return message.channel.send("**__Menciona a una persona primero!__**");
+    if(!vip.tiene(`${user.id}`)) return message.reply("Ese usuario no esta en la lista.")
+    vip.eliminar(`${user.id}`)
+        return message.channel.send("<@"+user + ">"+" ha sido eliminado de la lista vip!.");
+}
+
+//-------------------------[Plantilla para cmds VIP]-----------------------------
+// if(!vip.tiene(message.author.id) return message.channel.send("¡No tienes VIP, no puedes utilizar esta función!") 
+// Si el la ID del usuario no está en la DB devuelve un mensaje.
+
+//message.channel.send("¡Funciona!") 
+ // Si las condiciones se cumplen devuelve un mensaje.
 
 // ----------------------[Fin de la lista de comandos]---------------------------
 });
