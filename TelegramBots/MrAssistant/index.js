@@ -9,7 +9,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant (Telegram Version)
-// VERSION : 1.0.9
+// VERSION : 1.1.0
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // HOLAA EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -24,7 +24,7 @@
 // app.get('/', function(request, response) {
 // 	response.sendFile(__dirname + '/views/index.html');
 // });
-// app.listen(3000, () => console.log(`v1.0.9));
+// app.listen(3000, () => console.log('v1.1.0'));
 
 //----------------[Codigo fuente]----------------
 //----------------[Constantes]----------------
@@ -33,15 +33,15 @@ const config = require("./config/config.json");
 const bot = new Telegraf(config.token);
 
 //----------------[Variables]----------------
-let btcvar = "61109.80 USD - 1243046.66 MXN";
-let ethvar = "4474.45 USD - 91015.68 MXN";
-let xmrvar = "258.5 USD - 5258.20 MXN";
-let ltcnvar = "198.32 USD - 4034.07 MXN";
-let dogevar = "0.26 USD - 5.29 MXN";
-let fecha = "(Actualización 5/Nov/2021)";
+let btcvar = "47238.10 USD - 971720.78 MXN";
+let ethvar = "3725.56 USD - 76637.38 MXN";
+let xmrvar = "213.04 USD - 4382.38 MXN";
+let ltcnvar = "148.69 USD - 3058.66 MXN";
+let dogevar = "0.17 USD - 3.50 MXN";
+let fecha = "(Actualización 29/Dic/2021)";
 
 let prefix = "m_"
-let version = "v1.0.9"
+let version = "v1.1.0"
 //--------------[Mensaje de Consola]--------------
 console.log("MrAssistant Activado");
 
@@ -115,7 +115,7 @@ bot.command('m_dev_networks', (ctx) => {
 
 //-------------------[VERSIONES]-------------------
 bot.command('m_version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.9 que fue lanzada el 5/Nov/2021 por TecnoProjects | @Mr_TechX")
+    ctx.reply("Actualmente estoy en mi verison 1.1.0 que fue lanzada el 29/Dic/2021 por TecnoProjects | @Mr_TechX")
 });
 
 bot.command('m_version_logs', (ctx) => {
@@ -174,9 +174,9 @@ bot.command('m_chat_muerto', (ctx) => {
 
 //-------------------[SCHOOL CLASS]-------------------
 bot.command('m_horario', (ctx) => {
-    let horarioimg = "https://github.com/Mr-TechX/MrAssistantTelegram/blob/v1.0.0/img/Horario.jpg?raw=true"
+    let horarioimg = "https://github.com/Mr-TechX/MrAssistantTelegram/blob/v1.0.0/img/horario5b.png?raw=true"
     ctx.replyWithPhoto(horarioimg)
-    ctx.reply("Te doy solo la tabla, por que tus maestros cambian los links a cada rato :)")
+    ctx.reply("Toma, este es el horario de 5B de Instrumentación Industrial del CECyTE Acámbaro")
 });
 
 //-------------------[SUPPORT]-------------------
